@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   before_action :auth
 
   def hello
+     redirect_to controller: 'sessions', action: 'new' unless session[:name]
   end
 
   def current_user
@@ -16,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def auth
     redirect_to :controller => 'sessions', :action => 'new' unless current_user
-      
+
   end
 
 end
