@@ -9,15 +9,15 @@ class ApplicationController < ActionController::Base
      redirect_to controller: 'sessions', action: 'new' unless session[:name]
   end
 
-  def current_user
-    session[:name] || nil
-  end
-
-  private
-
-  def auth
-    redirect_to :controller => 'sessions', :action => 'new' unless current_user
-
-  end
+  # def current_user
+  #   session[:name] || nil
+  # end
+  # 
+  # private
+  # 
+  # def auth
+  #   redirect_to :controller => 'sessions', :action => 'new' unless current_user
+  # 
+  # end
 
 end
