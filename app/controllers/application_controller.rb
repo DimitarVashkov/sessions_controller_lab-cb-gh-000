@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
   private
 
   def auth
-     redirect_to :controller => 'sessions', :action => 'new'  unless current_user
+    if current_user
+      redirect_to '/'
+    else
+     redirect_to :controller => 'sessions', :action => 'new'
+   end
   end
 
 end
