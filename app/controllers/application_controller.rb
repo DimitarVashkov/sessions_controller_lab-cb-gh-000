@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
       redirect_to :controller => 'sessions', :action => 'new'
     else
       redirect_to '/'
-
    end
   end
 
