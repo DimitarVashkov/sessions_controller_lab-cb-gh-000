@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   private
 
   def auth
-     redirect_to '/login' unless session.include? :name 
+     redirect_to '/login' unless current_user
   end
 
 end
